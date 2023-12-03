@@ -331,5 +331,17 @@ Certainly! Here's a simplified introduction to microservices and why they are ne
 - **Consider:** Service discovery, API gateway, data consistency, monitoring.
 
 ![Microservices Architecture](https://assets-global.website-files.com/5d9bc5d562ffc2869b470941/5e6bfeeff5f26e7e9376a8c7_microservices.png)
-
+## Cluster vs Grid Computing
 In a nutshell, microservices break apps into small, self-sufficient parts for agility and scalability. Challenges include communication and data management, addressed through strategies like service discovery and API gateways.
+Certainly, here's a table summarizing the key differences between cluster computing and grid computing without including cloud computing for comparison:
+
+| Feature                | Cluster Computing                                   | Grid Computing                                   |
+|------------------------|-----------------------------------------------------|--------------------------------------------------|
+| *Architecture*       | Group of interconnected computers or servers        | Network of distributed and loosely coupled resources |
+| *Resource Ownership* | Owned and managed by a single organization or entity | May be owned and managed by multiple organizations |
+| *Resource Sharing*    | Resources shared among nodes in a closed environment | Resources shared among nodes across organizations |
+| *Flexibility*         | Provides high performance and low latency            | Offers flexibility but may have higher latency    |
+| *Scalability*        | Typically scales vertically or through clustering    | Scales horizontally and vertically               |
+| *Resource Management* | Managed by a central cluster manager or scheduler    | May use distributed resource management systems |
+| *Workload Types*      | Suited for tightly-coupled parallel workloads        | Suited for a variety of parallel and distributed workloads |
+| *Example*             | High-Performance Computing (HPC) clusters            | Global collaboration projects with distributed resources |
