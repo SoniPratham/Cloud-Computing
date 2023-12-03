@@ -364,3 +364,18 @@ Certainly, here's a comparison between Monolithic and Microservices architecture
 | Single Technology Stack                  | Multiple Technology Stacks               |
 | Difficulty in Isolating Failures         | Easier Isolation of Failures             |
 
+## Introduction to Jenkins : CI/CD Automation
+
+**Jenkins:**
+- **What is Jenkins:** Jenkins is an open-source automation server that helps automate various stages of the software development process.
+- **Continuous Integration (CI):** Jenkins is commonly used for implementing Continuous Integration, where code changes are automatically built, tested, and integrated into a shared repository.
+- **Continuous Delivery/Deployment (CD):** Jenkins can also be extended for Continuous Delivery/Deployment, automating the process of deploying applications to various environments.
+- **Build Automation:** Jenkins helps automate the building and packaging of software applications, ensuring consistency and reducing manual efforts.
+- **Pipeline Creation:** Jenkins provides a way to define workflows as code, called Jenkins Pipeline, which specifies the entire build, test, and deployment process.
+- **Plugins:** Jenkins supports a wide range of plugins that extend its capabilities, such as integration with version control systems, testing frameworks, and deployment tools.
+- **Distributed Builds:** Jenkins supports distributed builds, allowing jobs to be distributed and executed on different machines.
+- **Monitoring and Reporting:** Jenkins provides insights into build/test results, enabling developers to quickly identify issues.
+- **Extensibility:** Developers can create custom plugins and integrate Jenkins with other tools to fit specific needs.
+- **Community and Ecosystem:** Jenkins has a large and active community, leading to a rich ecosystem of resources and plugins.
+
+In summary, Jenkins is a versatile automation server used for Continuous Integration, Continuous Delivery, and building, testing, and deploying software applications. It helps streamline development processes and improve software quality.
