@@ -379,3 +379,173 @@ Certainly, here's a comparison between Monolithic and Microservices architecture
 - **Community and Ecosystem:** Jenkins has a large and active community, leading to a rich ecosystem of resources and plugins.
 
 In summary, Jenkins is a versatile automation server used for Continuous Integration, Continuous Delivery, and building, testing, and deploying software applications. It helps streamline development processes and improve software quality.
+
+## Distributed Computing and Parallel Computing different 
+
+| **Distributed Computing**                 | **Parallel Computing**                   |
+|-------------------------------------------|-----------------------------------------|
+| **Definition:**                           | **Definition:**                         |
+| Processing tasks are distributed across multiple computers in a network. | Processing tasks are divided among multiple processors in a single machine. |
+| **Communication:**                        | **Communication:**                      |
+| Involves communication between nodes, often over a network. | Communication between processors is typically faster, as they share the same memory and bus. |
+| **Scalability:**                          | **Scalability:**                        |
+| Easily scalable by adding more nodes to the network. | Scalability is limited to the capabilities of a single machine. |
+| **Resource Location:**                    | **Resource Location:**                  |
+| Resources can be geographically dispersed. | Resources are located within the same machine. |
+| **Fault Tolerance:**                      | **Fault Tolerance:**                    |
+| More resilient to hardware failures, as tasks can be rerouted to other nodes. | Susceptible to failure if a processor malfunctions, as it may affect the entire system. |
+| **Programming Model:**                    | **Programming Model:**                  |
+| Requires distributed programming models, often using message passing. | Typically uses shared-memory programming models, allowing for simpler programming. |
+| **Examples:**                            | **Examples:**                          |
+| Hadoop, MapReduce, and distributed databases. | SIMD (Single Instruction, Multiple Data), OpenMP, and MPI. |
+
+## (Optinal) Elements of Distributed Computing, Parallel Computing 
+**Parallel Computing:**
+
+- **Definition:** Utilizes multiple processors to perform tasks simultaneously, improving CPU utilization and overall performance.
+- **Memory System:** Can use shared or distributed memory systems, with shared memory allowing all CPUs to access the same memory.
+- **Advantages:**
+  - Increased CPU utilization and performance.
+  - Fault tolerance as the failure of one CPU doesn't affect others.
+  - Ability to handle multiple tasks simultaneously.
+  - Applicable to modeling and simulating complex real-world events.
+- **Disadvantages:**
+  - High power consumption in multi-core architectures.
+  - Complexity in implementation, debugging, and coordination, sometimes performing worse than serial equivalents.
+
+**Distributed Computing:**
+
+- **Definition:** Involves multiple software components residing on different systems, operating as a single system. Computers can be geographically dispersed and connected by networks.
+- **System Configurations:** Can comprise various configurations, such as mainframes, PCs, workstations, and minicomputers, working together as a network.
+- **Advantages:**
+  - Flexibility, easy installation, and debugging of new services.
+  - Scalability by adding multiple machines.
+  - Fault isolation, as the failure of one server doesn't affect others.
+  - Combining computational capacity for faster processing.
+- **Disadvantages:**
+  - Challenges in data security and sharing in open systems.
+  - Increased difficulty in troubleshooting and diagnostics due to distribution.
+  - Lack of software support is a common issue in distributed systems.
+
+In summary, parallel computing focuses on simultaneous task execution using multiple processors, while distributed computing involves multiple systems working together as a single entity. Both have advantages and disadvantages related to performance, fault tolerance, complexity, and scalability.
+
+## Cluster Computing , Architecture and Applications with graphical representation
+**Cluster Computing:**
+
+- **Definition:** Cluster computing is a type of parallel/distributed computing where a group of interconnected computers work together as a single, unified computing resource.
+
+- **Architecture:**
+
+  - **Node:**
+    - A single computer within the cluster.
+    - Each node contributes computing power and resources.
+  
+  - **Interconnect:**
+    - Network connections between nodes.
+    - Fast interconnects enhance communication speed.
+
+  - **Master/Controller Node:**
+    - Manages the distribution of tasks among nodes.
+    - Orchestrates communication and coordination.
+
+  - **Worker/Compute Nodes:**
+    - Perform the actual computation tasks.
+    - Receive instructions from the master node.
+
+- **Applications:**
+
+  - **High-Performance Computing (HPC):**
+    - Solving complex scientific and engineering problems.
+    - Weather modeling, molecular simulations, etc.
+
+  - **Data Analysis and Processing:**
+    - Big Data processing and analytics.
+    - Distributed storage and processing.
+
+  - **Parallel Batch Processing:**
+    - Parallel execution of multiple tasks simultaneously.
+    - Efficient processing of large datasets.
+
+  - **Machine Learning and AI:**
+    - Training and inference across multiple nodes.
+    - Accelerating deep learning tasks.
+
+**Graphical Representation:**
+
+Here's a simple diagram representing a cluster computing architecture:
+
+```
+  +-----------------+
+  |    Master       |
+  |   Controller    |
+  +--------|--------+
+           |
+  +--------|--------+
+  |    Node 1       |
+  |    (Slave)      |
+  +-----------------+
+  
+  +--------|--------+
+  |    Node 2       |
+  |    (Slave)      |
+  +-----------------+
+  
+  +--------|--------+
+  |    Node 3       |
+  |    (Slave)      |
+  +-----------------+
+```
+
+In this diagram, the Master Controller manages and distributes tasks to the slave nodes. The nodes collaborate to perform computations or tasks in parallel, leveraging the cluster's combined computational power.
+
+Cluster computing is highly scalable, making it suitable for tasks requiring substantial computational power, such as scientific simulations, data processing, and machine learning.
+
+## Load Balancing in Cluster Computing
+**Load Balancing in Cluster Computing:**
+
+**Definition:** Load balancing in cluster computing is the process of efficiently distributing incoming network traffic or computational tasks across multiple nodes (computers) to ensure optimal resource utilization, prevent overload on any single node, and enhance overall system performance.
+
+**How Load Balancing Works:**
+
+1. **Monitoring Node Health:**
+   - Load balancers constantly monitor the health and performance of each node in the cluster.
+
+2. **Traffic Distribution:**
+   - Incoming requests or tasks are directed to the least busy or most available node based on the load balancer's assessment.
+
+3. **Task Queuing:**
+   - Load balancers may implement queues to evenly distribute tasks among nodes, preventing bottlenecks.
+
+4. **Adaptive Algorithms:**
+   - Advanced load balancers use adaptive algorithms that consider factors like node capacity, current load, and response time to make intelligent distribution decisions.
+
+**Tech Example:**
+
+**Scenario:** Imagine a web application hosted on a cluster of servers receiving user requests.
+
+1. **Without Load Balancing:**
+   - If all requests go to a single server (node), it may become overloaded, leading to slow response times and potential downtime.
+
+2. **With Load Balancing:**
+   - A load balancer sits in front of the servers, distributing incoming requests among them.
+   - If Server A is busy, the load balancer sends new requests to Server B or C.
+   - This ensures even distribution of user traffic, optimal resource utilization, and prevents any single server from being overwhelmed.
+
+**Popular Load Balancing Techniques:**
+
+1. **Round Robin:**
+   - Distributes tasks equally in a circular order to each node.
+
+2. **Least Connections:**
+   - Directs tasks to the node with the fewest active connections.
+
+3. **Weighted Round Robin:**
+   - Assigns weights to nodes, distributing tasks in proportion to their capacity.
+
+**Benefits of Load Balancing:**
+
+- **Scalability:** Easily scale by adding or removing nodes without affecting users.
+- **High Availability:** Ensures that if one node fails, others can handle the load.
+- **Optimized Resource Use:** Maximizes the utilization of each node in the cluster.
+
+In essence, load balancing ensures efficient use of resources, improves system performance, and enhances the overall user experience in cluster computing scenarios.
