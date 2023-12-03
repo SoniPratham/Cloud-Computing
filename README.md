@@ -345,3 +345,22 @@ Certainly, here's a table summarizing the key differences between cluster comput
 | *Resource Management* | Managed by a central cluster manager or scheduler    | May use distributed resource management systems |
 | *Workload Types*      | Suited for tightly-coupled parallel workloads        | Suited for a variety of parallel and distributed workloads |
 | *Example*             | High-Performance Computing (HPC) clusters            | Global collaboration projects with distributed resources |
+
+## Monolithic and Microservies
+Certainly, here's a comparison between Monolithic and Microservices architectures in a two-column table format:
+
+| **Monolithic Architecture**                | **Microservices Architecture**            |
+|-------------------------------------------|------------------------------------------|
+| Single Application                       | Multiple Independent Services            |
+| Entire App in One Codebase               | Separate Codebases for Services          |
+| Tight Coupling Between Components        | Loose Coupling Between Services          |
+| Single Database                           | Databases Managed by Individual Services |
+| Scaling Whole App Together               | Scaling Individual Services Independently |
+| Complex Deployments                      | Easier and Independent Deployments       |
+| Single Point of Failure                  | Failures Limited to Specific Services    |
+| Monolithic Updates Impact Whole App      | Independent Updates for Each Service     |
+| Long Development and Testing Cycles      | Faster Development and Testing Cycles    |
+| Limited Technology Flexibility           | Choice of Technologies for Each Service  |
+| Single Technology Stack                  | Multiple Technology Stacks               |
+| Difficulty in Isolating Failures         | Easier Isolation of Failures             |
+
